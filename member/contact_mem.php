@@ -1,35 +1,30 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Bootstrap5 Css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!--Style.css-->
-    <link rel="stylesheet" href="/style/style.css">
-    <!--Sweetalert1.1.3-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
-        integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
-        integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Mulish&family=Prompt&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <!--Font awesome6.2-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Project</title>
-</head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!--Bootstrap5 Css-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!--Style.css-->
+        <link rel="stylesheet" href="../style/style2.css">
+        <!--Sweetalert-->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anek+Telugu&family=Mulish&family=Prompt&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
+        <!--Font awesome6.2-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Project</title>
+    </head>
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: rgba(255, 255, 255, 0.9);">
@@ -42,25 +37,25 @@
             <div class="navbar-collapse navbar-default custom-menu1" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="index_mem.html">หน้าหลัก</a>
+                        <a class="nav-link" href="index_mem.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="search_mem.html">ค้นหา</a>
+                        <a class="nav-link" href="search_mem.php">ค้นหา</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post_mem.html">โพสต์หารูมเมท</a>
+                        <a class="nav-link" href="post_mem.php">โพสต์หารูมเมท</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact_mem.html">เกี่ยวกับเรา</a>
+                        <a class="nav-link" href="contact_mem.php">เกี่ยวกับเรา</a>
                     </li>
                 </ul>
 
                 <form class="d-flex-1">
-                    <span class="accout"><img src="/img/People_1.png" class="imgrm1" alt="">
+                    <span class="accout"><img src="../img/People_1.png" class="imgrm1" alt="">
                         : admin01</span>
-                    <a class="btn7" type="submit" href="profile_mem.html" style="margin:3px;"><i
+                    <a class="btn7" type="submit" href="profile_mem.php" style="margin:3px;"><i
                             class="fa-solid fa-address-card"></i> Profile</a>
-                    <a class="btn7" type="submit" href="#" style="margin:3px;"><i
+                    <a class="btn7" type="submit" href="../api/logout.php" style="margin:3px;"><i
                             class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                 </form>
 
@@ -75,11 +70,11 @@
                     <div class="offcanvas-body">
                         <center>
                             <form class="d-flexs">
-                                <img src="/img/People_1.png" class="imgrm2" alt="">
+                                <img src="../img/People_1.png" class="imgrm2" alt="">
 
                                 <div class="navbars2">
                                     <center><span class="accout2">admin01</span></center>
-                                    <a class="btn7" type="submit" href="profile_mem.html" style="margin:3px;">
+                                    <a class="btn7" type="submit" href="profile_mem.php" style="margin:3px;">
                                         <i class="fa-solid fa-address-card"></i> Profile</a>
                                     <a class="btn7" type="submit" href="#" style="margin:3px;"><i
                                             class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
@@ -90,22 +85,22 @@
                         <ul class="nabs" style="margin-top: 130px;">
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index_mem.html"><i class="fa-solid fa-house"></i>
+                                <a class="nav-link text-white" href="index_mem.php"><i class="fa-solid fa-house"></i>
                                     หน้าหลัก</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item ">
-                                <a class="nav-link text-white" href="search_mem.html"><i
+                                <a class="nav-link text-white" href="search_mem.php"><i
                                         class="fa-solid fa-magnifying-glass"></i> ค้นหา</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="post_mem.html"><i
+                                <a class="nav-link text-white" href="post_mem.php"><i
                                         class="fa-solid fa-file-circle-plus"></i> โพสต์หารูมเมท</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="contact_mem.html"><i
+                                <a class="nav-link text-white" href="contact_mem.php"><i
                                         class="fa-solid fa-id-card-clip"></i> เกี่ยวกับเรา</a>
                             </li>
                             <hr class="bg-white">
@@ -116,19 +111,24 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="card" style="width: auto; margin-top: 150px; background-color: rgba(255, 255, 255, 0.7); border-radius: 20px;">
-            <div class="card-body" style="margin: 20px 20px;">
-                <img src="/img/People_1.png" alt="" class="imgrm4"> <span class="text-profile1">admin01</span>
-                <button class="btn8"><a href="#" style="text-decoration: none;">เปลี่ยนรหัสผ่าน</a></button>
-                <hr>
-                <p>โพสต์ของคุณ</p>
-                <a href="#">โพสต์หารูมเมท 1</a>
-                <button class="btn9"><a href="#" style="text-decoration: none;"></a>แก้ไข</button>
-                <button class="btn10"><a href="#" style="text-decoration: none;"></a>ลบ</button>
-            </div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="container-fluids">
+        <div class="text-contact" style="padding-top:36px;">
+            <center>
+                <h1 class="p-5 " style="color:black;width:auto;">เกี่ยวกับเรา</h1>
+                <img class="mt-5" src="../img/People_1.png" alt="#" style="width:200px; border-radius: 50%;">
+                <p class="text-1" style="font-size: 20px; font-weight: 1000;">นาย ชัยยา ศรีกรด</p>
+                <img class="mt-5" src="../img/People_1.png" alt="#" style="width:200px; border-radius: 50%;">
+                <p class="text-2" style="font-size: 20px; font-weight: 1000;">นาย วัฒนากรณ์ สุขศิริ</p>
+            </center>
         </div>
     </div>
+
+
+
+
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -137,16 +137,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="/js/hidenpass.js"></script>
     <script>
         function myFunction() {
-            swal({
+            Swal.fire({
                 title: 'กรุณาล็อกอิน',
                 text: 'เพื่อเข้าสู่ระบบ',
-                type: 'error',
+                icon: 'error',
                 confirmButtonColor: "#DD6B55",
             }, function () {
-                window.location = 'login.html'
+                window.location = 'login.php'
             });
         }
     </script>

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(/img/banner-shape.png);
+    background: url(../img/banner-shape.png);
     background-repeat: no-repeat;
     background-position: right 0px;
     background-size: 400px;
@@ -14,7 +14,7 @@ body{
 
 @media only screen and (min-width : 991px) {
     body {
-        background: url(/img/banner-shape.png);
+        background: url(../img/banner-shape.png);
         background-repeat: no-repeat;
         background-position: right 0px;
     }

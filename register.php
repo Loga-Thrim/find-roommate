@@ -11,13 +11,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Style.css-->
     <link rel="stylesheet" href="./style/style.css">
-    <!--Sweetalert1.1.3-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
-        integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
-        integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +39,7 @@
             <div class="navbar-collapse navbar-default custom-menu1" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">หน้าหลัก</a>
+                        <a class="nav-link" href="index.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" onclick="myFunction()" href="#">ค้นหา</a>
@@ -53,12 +48,12 @@
                         <a class="nav-link" onclick="myFunction()" href="#">โพสต์หารูมเมท</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">เกี่ยวกับเรา</a>
+                        <a class="nav-link" href="contact.php">เกี่ยวกับเรา</a>
                     </li>
                 </ul>
 
                 <form class="d-flex-1">
-                    <a class="btn3" type="submit" href="login.html">ล็อกอิน</a>
+                    <a class="btn3" type="submit" href="login.php">ล็อกอิน</a>
                 </form>
 
 
@@ -72,15 +67,15 @@
                     <div class="offcanvas-body">
                         <center>
                             <form class="d-flexs">
-                                <a class="btn5" type="submit" href="login.html" style="margin:3px;">ล็อกอิน</a>
-                                <a class="btn5" type="submit" href="register.html" style="margin:3px;">สมัครสมาชิก</a>
+                                <a class="btn5" type="submit" href="login.php" style="margin:3px;">ล็อกอิน</a>
+                                <a class="btn5" type="submit" href="register.php" style="margin:3px;">สมัครสมาชิก</a>
                             </form>
                         </center>
 
                         <ul class="mt-4">
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index.html"><i class="fa-solid fa-house"></i>
+                                <a class="nav-link text-white" href="index.php"><i class="fa-solid fa-house"></i>
                                     หน้าหลัก</a>
                             </li>
                             <hr class="bg-white">
@@ -95,7 +90,7 @@
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="contact.html"><i
+                                <a class="nav-link text-white" href="contact.php"><i
                                         class="fa-solid fa-id-card-clip"></i> เกี่ยวกับเรา</a>
                             </li>
                             <hr class="bg-white">
@@ -142,7 +137,7 @@
                                         <button type="submit" class="btn6 form-control submit px-3">Register</button>
                                     </div>
 
-                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.html"
+                                    <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="login.php"
                                             class="fw-bold text-body"><u>Login here</u></a></p>
 
                                 </form>
@@ -189,54 +184,53 @@
                     body: Object.entries(dataRegister).map(([k,v])=>{return k+'='+v}).join('&')
                 }).then(res => res.json())
                 .then(res => {
-                    res = res;
                     if(res.success) {
-                        swal({
+                        Swal.fire({
                             title: "สมัครสมาชิกสำเร็จ",
-                            type: "success"
+                            icon: "success"
                         }).then(() => {
-                            window.location.href = './member/index_mem.html'
+                            window.location.href = './member/index_mem.php'
                         })
                     } else if(!res.success && res.msg == 'dupicate email') {
-                        swal({
+                        Swal.fire({
                             title: "Email นี้มีผู้ใช้แล้ว",
                             text: "โปรดใช้ Email อื่นหรือเข้าสู่ระบบ",
-                            type: "warning"
+                            icon: "warning"
                         })
                     } else {
-                        swal({
+                        Swal.fire({
                             title: "สมัครสมาชิกไม่สำเร็จ",
                             text: "โปรดลองอีกครั้งภายหลัง",
-                            type: "error"
+                            icon: "error"
                         })
                     }
                 }).catch(e => {
-                    swal({
+                    console.log(e);
+                    Swal.fire({
                         title: "สมัครสมาชิกไม่สำเร็จ",
                         text: "โปรดลองอีกครั้งภายหลัง",
-                        type: "error"
+                        icon: "error"
                     })
                 })
             } else {
-                swal({
+                Swal.fire({
                     title: "รหัสผ่านไม่ตรงกัน",
                     text: "โปรดกรอกรหัสผ่านให้ตรงกันแล้วลองใหม่อีกครั้ง",
-                    type: "warning"
+                    icon: "warning"
                 })
             }
-
 
             return false;
         }
 
         function myFunction() {
-            swal({
+            Swal.fire({
                 title: 'กรุณาล็อกอิน',
                 text: 'เพื่อเข้าสู่ระบบ',
-                type: 'error',
+                icon: 'error',
                 confirmButtonColor: "#DD6B55",
             }, function () {
-                window.location = 'login.html'
+                window.location = 'login.php'
             });
         }
     </script>

@@ -10,14 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Style.css-->
-    <link rel="stylesheet" href="/style/style2.css">
-    <!--Sweetalert1.1.3-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"
-        integrity="sha512-7VTiy9AhpazBeKQAlhaLRUk+kAMAb8oczljuyJHPsVPWox/QIXDFOnT9DUk1UC8EbnHKRdQowT7sOBe7LAjajQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
-        integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/style2.css">
+    <!--Sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,25 +38,25 @@
             <div class="navbar-collapse navbar-default custom-menu1" id="navbarTogglerDemo01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="index_mem.html">หน้าหลัก</a>
+                        <a class="nav-link" href="index_mem.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="search_mem.html">ค้นหา</a>
+                        <a class="nav-link" href="search_mem.php">ค้นหา</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post_mem.html">โพสต์หารูมเมท</a>
+                        <a class="nav-link" href="post_mem.php">โพสต์หารูมเมท</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact_mem.html">เกี่ยวกับเรา</a>
+                        <a class="nav-link" href="contact_mem.php">เกี่ยวกับเรา</a>
                     </li>
                 </ul>
 
                 <form class="d-flex-1">
-                    <span class="accout"><img src="/img/People_1.png" class="imgrm1" alt="">
+                    <span class="accout"><img src="../img/People_1.png" class="imgrm1" alt="">
                         : admin01</span>
-                    <a class="btn7" type="submit" href="profile_mem.html" style="margin:3px;"><i
+                    <a class="btn7" type="submit" href="profile_mem.php" style="margin:3px;"><i
                             class="fa-solid fa-address-card"></i> Profile</a>
-                    <a class="btn7" type="submit" href="#" style="margin:3px;"><i
+                    <a class="btn7" type="submit" href="../api/logout.php" style="margin:3px;"><i
                             class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                 </form>
 
@@ -76,11 +71,11 @@
                     <div class="offcanvas-body">
                         <center>
                             <form class="d-flexs">
-                                <img src="/img/People_1.png" class="imgrm2" alt="">
+                                <img src="../img/People_1.png" class="imgrm2" alt="">
 
                                 <div class="navbars2">
                                     <center><span class="accout2">admin01</span></center>
-                                    <a class="btn7" type="submit" href="profile_mem.html" style="margin:3px;">
+                                    <a class="btn7" type="submit" href="profile_mem.php" style="margin:3px;">
                                         <i class="fa-solid fa-address-card"></i> Profile</a>
                                     <a class="btn7" type="submit" href="#" style="margin:3px;"><i
                                             class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
@@ -91,22 +86,22 @@
                         <ul class="nabs" style="margin-top: 130px;">
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="index_mem.html"><i class="fa-solid fa-house"></i>
+                                <a class="nav-link text-white" href="index_mem.php"><i class="fa-solid fa-house"></i>
                                     หน้าหลัก</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item ">
-                                <a class="nav-link text-white" href="search_mem.html"><i
+                                <a class="nav-link text-white" href="search_mem.php"><i
                                         class="fa-solid fa-magnifying-glass"></i> ค้นหา</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="post_mem.html"><i
+                                <a class="nav-link text-white" href="post_mem.php"><i
                                         class="fa-solid fa-file-circle-plus"></i> โพสต์หารูมเมท</a>
                             </li>
                             <hr class="bg-white">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="contact_mem.html"><i
+                                <a class="nav-link text-white" href="contact_mem.php"><i
                                         class="fa-solid fa-id-card-clip"></i> เกี่ยวกับเรา</a>
                             </li>
                             <hr class="bg-white">
@@ -128,13 +123,13 @@
                             <span>Change Image</span>
                         </label>
                         <input id="file" type="file" onchange="loadFile(event)" />
-                        <img src="/img/People_1.png" id="output" width="200" />
+                        <img src="../img/People_1.png" id="output" width="200" />
                     </div>
                 </div>
                 <div class="col-6 mt-5 col-md-8 col-lg-6">
                     <span class="text-name01">admin01</span>
                 </div>
-                <div class="col-6 col-md-3 col-lg-2" style="margin: 2rem 1.5rem ;"><a class="btn15" href="change_name.html"
+                <div class="col-6 col-md-3 col-lg-2" style="margin: 2rem 1.5rem ;"><a class="btn15" href="change_name.php"
                             style="text-decoration: none;">Change name</a></div>
             </div>
             <div class="row" style="margin: 5px;">
@@ -144,7 +139,7 @@
                 <div class="col-12 col-md-12 col-lg-12">
                     <p>โพสต์ของคุณ</p>
                 </div>
-                <div class="col-12 col-md-12 col-lg-12 mt-1"><a href="info_mem.html">โพสต์หารูมเมท 1</a> 
+                <div class="col-12 col-md-12 col-lg-12 mt-1"><a href="info_mem.php">โพสต์หารูมเมท 1</a> 
                     <button class="btn9"><a href="#"style="text-decoration: none;">แก้ไข</a></button>
                     <button class="btn10"><a href="#" style="text-decoration: none;">ลบ</a></button>
                 </div>                
@@ -164,13 +159,13 @@
 
     <script>
         function myFunction() {
-            swal({
+            Swal.fire({
                 title: 'กรุณาล็อกอิน',
                 text: 'เพื่อเข้าสู่ระบบ',
-                type: 'error',
+                icon: 'error',
                 confirmButtonColor: "#DD6B55",
             }, function () {
-                window.location = 'login.html'
+                window.location = 'login.php'
             });
         }
     </script>
