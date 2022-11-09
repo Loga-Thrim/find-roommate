@@ -12,6 +12,7 @@
 
         if(password_verify($password, $fetch['password'])) {
             session_start();
+            $_SESSION['id'] = $fetch['id'];
             $_SESSION['avatar'] = $fetch['avatar'];
             $_SESSION['name'] = $fetch['name'];
             $_SESSION['email'] = $fetch['email'];

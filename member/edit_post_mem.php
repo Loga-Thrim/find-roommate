@@ -22,12 +22,20 @@
 </head>
 
 <body>
-    <?php include '../components/navbar-user.php'; ?>
+    <?php
+    include '../components/navbar-user.php';
+    include '../api/dbcon.php';
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM post WHERE id=$id";
+    $query = mysqli_query($dbcon, $sql);
+    $fetch = mysqli_fetch_assoc($query);
+    ?>
 
     <div class="containers">
         <div class="text-roommate" style="padding-top: 90px;">
             <center>
-                <h1 class="p-5 " style="color:black; width:auto; margin-top: -30px;">สร้างโพสต์เพื่อหารูมเมท</h1>
+                <h1 class="p-5 " style="color:black; width:auto; margin-top: -30px;">แก้ไขโพสต์</h1>
             </center>
         </div>
 
@@ -42,11 +50,13 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> ชื่อ-นามสกุล</span>
-                                        <input type="text" class="form-control" name="full_name" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="full_name" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['full_name']; ?>">
                                     </div>
                                     <div class="col">
                                         <span> ชื่อเล่น</span>
-                                        <input type="text" class="form-control" name="nick_name" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="nick_name" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['nick_name']; ?>">
                                     </div>
                                 </div>
 
@@ -54,33 +64,36 @@
                                     <div class="col">
                                         <span> เพศ</span>
                                         <select class="form-select" name="gender" aria-label="Default select example">
-                                            <option selected>กรุณาเลือกเพศ</option>
-                                            <option value="ชาย">ชาย</option>
-                                            <option value="หญิง">หญิง</option>
-                                            <option value="LGBT">LGBT</option>
+                                            <option <?php echo $fetch['gender'] == '' ? 'selected' : ''; ?>>กรุณาเลือกเพศ</option>
+                                            <option value="ชาย" <?php echo $fetch['gender'] == 'ชาย' ? 'selected' : ''; ?>>ชาย</option>
+                                            <option value="หญิง" <?php echo $fetch['gender'] == 'หญิง' ? 'selected' : ''; ?>>หญิง</option>
+                                            <option value="LGBT" <?php echo $fetch['gender'] == 'LGBT' ? 'selected' : ''; ?>>LGBT</option>
                                         </select>
                                     </div>
                                     <div class="col">
                                         <span> อายุ</span>
-                                        <input type="text" class="form-control" name="age" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="age" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['age']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col">
                                         <span> Line:ID</span>
-                                        <input type="text" class="form-control" name="line" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="line" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['line']; ?>">
                                     </div>
                                     <div class="col">
                                         <span> เบอร์โทร</span>
-                                        <input type="text" class="form-control" name="phone" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="phone" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['phone']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col">
                                         <span> นิสัย</span>
-                                        <textarea class="form-control" placeholder="" name="trait" id="floatingTextarea"></textarea>
+                                        <textarea class="form-control" placeholder="" name="trait" id="floatingTextarea"><?php echo $fetch['trait']; ?></textarea>
                                     </div>
                                     <div class="col">
                                     </div>
@@ -90,33 +103,38 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> ชื่อสถานที่พัก</span>
-                                        <input type="text" class="form-control" name="r_name" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_name" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['r_name']; ?>">
                                     </div>
                                     <div class="col">
                                         <span> ที่อยู่(สถานที่พัก)</span>
-                                        <textarea class="form-control" placeholder="" name="r_address" id="floatingTextarea"></textarea>
+                                        <textarea class="form-control" placeholder="" name="r_address" id="floatingTextarea"><?php echo $fetch['r_address']; ?></textarea>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col">
                                         <span> หมายเลขห้อง</span>
-                                        <input type="text" class="form-control" name="r_no" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_no" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['r_no']; ?>">
                                     </div>
                                     <div class="col">
                                         <span> อาศัยอยู่ชั้นที่</span>
-                                        <input type="text" class="form-control" name="r_floor" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_floor" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['r_floor']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col">
                                         <span> ราคาห้องพัก(ยังไม่หาร)</span>
-                                        <input type="text" class="form-control" name="r_price" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_price" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['r_price']; ?>">
                                     </div>
                                     <div class="col">
                                         <span> เบอร์โทรศัพท์ติดต่อ(สถานที่พัก)</span>
-                                        <input type="text" class="form-control" name="r_phone" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_phone" id="exampleInputtext" aria-describedby="text"
+                                        value="<?php echo $fetch['r_phone']; ?>">
                                     </div>
                                 </div>
 
@@ -125,7 +143,8 @@
                                     <div class="col-13 col-md-3 col-lg-2 ">
                                         <span> เตียงนอน(เดี่ยว)</span>
                                         <div class="form-check">
-                                            <input class="form-check-input" name="f_bed_one" type="checkbox" value="1" id="flexCheckDefault">
+                                            <input class="form-check-input" name="f_bed_one" type="checkbox" value="1" id="flexCheckDefault"
+                                            <?php echo $fetch['f_bed_one'] == '1' ? 'checked' : ''; ?>>
                                         </div>
                                     </div>
                                     <div class="col-4 col-md-2 ">
