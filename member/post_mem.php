@@ -42,7 +42,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> ชื่อ-นามสกุล</span>
-                                        <input type="text" class="form-control" name="full_name" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="full_name" id="exampleInputtext" aria-describedby="text" required>
                                     </div>
                                     <div class="col">
                                         <span> ชื่อเล่น</span>
@@ -53,7 +53,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> เพศ</span>
-                                        <select class="form-select" name="gender" aria-label="Default select example">
+                                        <select class="form-select" name="gender" aria-label="Default select example" required>
                                             <option selected>กรุณาเลือกเพศ</option>
                                             <option value="ชาย">ชาย</option>
                                             <option value="หญิง">หญิง</option>
@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="col">
                                         <span> อายุ</span>
-                                        <input type="text" class="form-control" name="age" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="age" id="exampleInputtext" aria-describedby="text" required>
                                     </div>
                                 </div>
 
@@ -73,7 +73,7 @@
                                     </div>
                                     <div class="col">
                                         <span> เบอร์โทร</span>
-                                        <input type="text" class="form-control" name="phone" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="phone" id="exampleInputtext" aria-describedby="text" required>
                                     </div>
                                 </div>
 
@@ -90,11 +90,11 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> ชื่อสถานที่พัก</span>
-                                        <input type="text" class="form-control" name="r_name" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_name" id="exampleInputtext" aria-describedby="text" required>
                                     </div>
                                     <div class="col">
                                         <span> ที่อยู่(สถานที่พัก)</span>
-                                        <textarea class="form-control" placeholder="" name="r_address" id="floatingTextarea"></textarea>
+                                        <textarea class="form-control" placeholder="" name="r_address" id="floatingTextarea" required></textarea>
                                     </div>
                                 </div>
 
@@ -112,7 +112,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <span> ราคาห้องพัก(ยังไม่หาร)</span>
-                                        <input type="text" class="form-control" name="r_price" id="exampleInputtext" aria-describedby="text">
+                                        <input type="text" class="form-control" name="r_price" id="exampleInputtext" aria-describedby="text" required>
                                     </div>
                                     <div class="col">
                                         <span> เบอร์โทรศัพท์ติดต่อ(สถานที่พัก)</span>
@@ -302,13 +302,9 @@
                                     </div>
                                 </div>
 
-
-
                                 <button type="submit" class="btn btn-primary mb-3" style="margin-top: 10px;"><i class="fa-solid fa-plus"></i> โพสต์</button>
-
                         </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -316,14 +312,6 @@
     </div>
     </div>
 
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
@@ -338,13 +326,6 @@
             });
         }
     </script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-
 </body>
 
 </html>

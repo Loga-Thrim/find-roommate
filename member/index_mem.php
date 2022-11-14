@@ -37,16 +37,16 @@
                         <template v-for="item in data">
                             <div class="col-6 col-xs-6 col-md-4 col-lg-3">
                                 <div class="card mem" style="width: 15rem; margin: 10px 12px; border-radius: 20px;">
-                                    <a :href="'./info_mem.php?id=' + item.id" style="text-align: center;">
+                                    <a :href="'./info_mem.php?id=' + item.id" style="text-align: center; overflow: hidden;">
                                         <img :src="item.avatar == '' ? '../img/People_1.png' : '../img/avatar/' + item.avatar"
                                             class="card-img-top" style="margin-top: 10px; height: 250px; width: auto;" alt="...">
                                     </a>
                                     <div class="card-body">
                                         <p class="card-text">
-                                            <label for="#">ชื่อเล่น: {{item.nickname}}</label><br>
-                                            <label for="#">เพศ: {{item.gender}}</label><br>
-                                            <label for="#">อายุ: {{item.age}} ปี</label><br>
-                                            <label for="#">สถานที่พัก: {{item.r_name}} </label>
+                                            <span>ชื่อเล่น: {{item.nickname}}</ห><br>
+                                            <span>เพศ: {{item.gender}}</ห><br>
+                                            <span>อายุ: {{item.age}} ปี</ห><br>
+                                            <span>สถานที่พัก: {{item.r_name}} </ห>
                                         </p>
                                     </div>
                                 </div>
@@ -55,20 +55,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="d-flex justify-content-center btn-toolbar mt-2" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group me-2" role="group" aria-label="First group">
-                    <button type="button" class="btn btn-primary">1</button>
-                    <button type="button" class="btn btn-primary">2</button>
-                    <button type="button" class="btn btn-primary">3</button>
-                    <button type="button" class="btn btn-primary">4</button>
-                    <button type="button" class="btn btn-primary">5</button>
-                    <button type="button" class="btn btn-primary">6</button>
-                    <button type="button" class="btn btn-primary">7</button>
-                    <button type="button" class="btn btn-primary">8</button>
-                </div>
-
-            </div> -->
 
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

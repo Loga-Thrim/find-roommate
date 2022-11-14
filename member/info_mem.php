@@ -171,7 +171,9 @@
                                     <div class="col-4 col-md-5 col-lg-3">
                                         <img :src="'../img/room/' + data.img1" alt="" style="width: 250px;">
                                     </div>
-                                    <div class="col">
+                                </div>
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-4 col-md-5 col-lg-3">
                                         <img :src="'../img/room/' + data.img2" alt="" style="width: 250px;">
                                     </div>
                                 </div>
@@ -179,7 +181,9 @@
                                     <div class="col-4 col-md-5 col-lg-3">
                                         <img :src="'../img/room/' + data.img3" alt="" style="width: 250px;">
                                     </div>
-                                    <div class="col">
+                                </div>
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col-4 col-md-5 col-lg-3">
                                         <img :src="'../img/room/' + data.img4" alt="" style="width: 250px;">
                                     </div>
                                 </div>
@@ -196,7 +200,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
-        const { createApp } = Vue
+        const {
+            createApp
+        } = Vue
 
         createApp({
             data() {
@@ -210,10 +216,10 @@
                     let id = url.searchParams?.get('id');
 
                     fetch(`../api/get_post.php?id=${id}`).then(res => res.json())
-                    .then(res => {
-                        this.data = res;
-                        console.log(res);
-                    })
+                        .then(res => {
+                            this.data = res;
+                            console.log(res);
+                        })
                 }
             },
             mounted() {
